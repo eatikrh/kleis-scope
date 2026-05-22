@@ -1,0 +1,18 @@
+[package]
+name = "scope-native"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "kleis-scope"
+path = "src/main.rs"
+
+[dependencies]
+scope-core = { path = "../scope-core" }
+eframe = "0.31"
+egui = "0.31"
+clap = { version = "4", features = ["derive"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "io-std", "net", "sync", "time"] }
+tokio-tungstenite = "0.26"
+futures-util = "0.3"
+notify = "8"

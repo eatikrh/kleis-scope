@@ -1,0 +1,16 @@
+[package]
+name = "scope-web"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+scope-core = { path = "../scope-core" }
+eframe = { version = "0.31", default-features = false, features = ["glow", "web_screen_reader"] }
+egui = "0.31"
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+web-sys = "0.3"
+console_error_panic_hook = "0.1"
